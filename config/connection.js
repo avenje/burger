@@ -7,7 +7,7 @@ if(process.env.JAWSDB_URL) {
 } else {
   //local host
     connection = mysql.createConnection({
-        root: 3000,
+        // root: 3000,
         host: "localhost",
         user: "root",
         password: "",
@@ -15,10 +15,12 @@ if(process.env.JAWSDB_URL) {
     });
 };
 
-connection.connect(function(err){
-    if(err)throw err;
-    console.log("connected as id: " + connection.threadid);
-});
+// connection.connect(function(err){
+//     if(err)throw err;
+//     console.log("connected as id: " + connection.threadid);
+// });
+
+
 
 connection.connect();
 module.exports= connection;
